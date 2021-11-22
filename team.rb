@@ -12,45 +12,31 @@ class Team
 		self.draw=draw
 	end
 
-	#mesod
+	#method
 	def calc_win_rate(win,lose)
 		result=win.to_f/(win.to_f+lose.to_f)
 	return result
 	end
 
 	def show_team_result()
-		print "#{self.name} の2020年の成績は #{self.win}勝 #{self.lose}敗 #{self.draw}分、勝率は "
-		#+ calc_win_rate(win,lose).to_f
+		puts "#{self.name} の2020年の成績は #{self.win}勝 #{self.lose}敗 #{self.draw}分、勝率は #{self.calc_win_rate(win,lose)}です。"
 	end
 end
 
-#array=[name, win, lose, draw]
-team1_value=["Giants",67,45,8]
-team1=Team.new(team1_value[0],team1_value[1],team1_value[2],team1_value[3])
-team1.show_team_result()
-puts "#{team1.calc_win_rate(team1_value[1],team1_value[2])}です。"
+Team1=Team.new("Giants",67,45,8)
+Team1.show_team_result()
 
-team2_value=["Tigers",60,53,7]
-team2=Team.new(team2_value[0],team2_value[1],team2_value[2],team2_value[3])
-team2.show_team_result()
-puts "#{team2.calc_win_rate(team2_value[1],team2_value[2])}です。"
+Team2=Team.new("Tigers",60,53,7)
+Team2.show_team_result()
 
-team3_value=["Dragons",60,55,5]
-team3=Team.new(team3_value[0],team3_value[1],team3_value[2],team3_value[3])
-team3.show_team_result()
-puts "#{team3.calc_win_rate(team3_value[1],team3_value[2])}です。"
+Team3=Team.new("Dragons",60,55,5)
+Team3.show_team_result()
 
-team4_value=["BayStars",56,58,6]
-team4=Team.new(team4_value[0],team4_value[1],team4_value[2],team4_value[3])
-team4.show_team_result()
-puts "#{team4.calc_win_rate(team4_value[1],team4_value[2])}です。"
+Team4=Team.new("BayStars",56,58,6)
+Team4.show_team_result()
 
-team5_value=["Carp",52,56,12]
-team5=Team.new(team5_value[0],team5_value[1],team5_value[2],team5_value[3])
-team5.show_team_result()
-puts "#{team5.calc_win_rate(team5_value[1],team5_value[2])}です。"
+Team5=Team.new("Carp",52,56,12)
+Team5.show_team_result()
 
-team6_value=["Swallows",41,69,10]
-team6=Team.new(team6_value[0],team6_value[1],team6_value[2],team6_value[3])
-team6.show_team_result()
-puts "#{team6.calc_win_rate(team6_value[1],team6_value[2])}です。"
+Team6=Team.new("Swallows",41,69,10)
+Team6.show_team_result()
